@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; 
-
+import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Button_navbar_inscripcion = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -17,10 +16,9 @@ const Button_navbar_inscripcion = () => {
   };
 
   const handleItemClick = (url) => {
-    window.open(url, '_blank'); // Abre el enlace en una nueva pestaña
+    window.open(url, "_blank"); // Abre el enlace en una nueva pestaña
     handleClose();
   };
-
 
   return (
     <>
@@ -40,18 +38,20 @@ const Button_navbar_inscripcion = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
+          vertical: "bottom",
+          horizontal: "center",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
+          vertical: "top",
+          horizontal: "center",
         }}
       >
-        <MenuItem onClick={() => handleItemClick('https://www.youtube.com')}>
+        <MenuItem onClick={() => handleItemClick("https://www.youtube.com")}>
           Categoria Avanzado
         </MenuItem>
-        <MenuItem onClick={() => handleItemClick('https://www.otro-enlace.com')}>
+        <MenuItem
+          onClick={() => handleItemClick("https://www.otro-enlace.com")}
+        >
           Categoria Junior
         </MenuItem>
         {/* Agrega más elementos MenuItem según sea necesario */}
